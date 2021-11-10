@@ -68,20 +68,10 @@
             <p>Downloading YouTube videos and audios made easy !</p>
             <div class="inpContainer">
                 <input type="text" name="" id="link" placeholder="Search Or Paste YouTube Link here" autocomplete="off">
-                <button onclick="download()">Download</button>
+                <button>Download</button>
             </div>
         </div>
     </div>
 </body>
-<script>
-    function download() {
-        let link = document.getElementById("link").value;
-        if(link==""){
-            alert("Please Input the link and Try again");
-        }
-        else{
-        window.location.href = "https://givefast.link/#url=" + link;
-        }
-    }
-</script>
+
 </html>
