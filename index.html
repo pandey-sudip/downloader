@@ -55,11 +55,19 @@
             font-size: 14px;
             font-weight: 550;
         }
+        @media screen and (max-width: 600px){
+            .container{
+                width: 90%;
+            }
+            
+        }
+            
+    
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Youtube Downloader</title>
+    <title>Youtube Downloader (UI Only)</title>
 </head>
 <body>
     <div class="container">
@@ -68,10 +76,20 @@
             <p>Downloading YouTube videos and audios made easy !</p>
             <div class="inpContainer">
                 <input type="text" name="" id="link" placeholder="Search Or Paste YouTube Link here" autocomplete="off">
-                <button>Download</button>
+                <button onclick="download()">Download</button>
             </div>
         </div>
     </div>
 </body>
-
+<script>
+    function download() {
+        let link = document.getElementById("link").value;
+        if(link==""){
+            alert("Please Input the link and Try again");
+        }
+        else{
+        window.location.href = "https://givefast.link/#url=" + link;
+        }
+    }
+</script>
 </html>
